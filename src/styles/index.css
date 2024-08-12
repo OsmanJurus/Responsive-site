@@ -1,17 +1,13 @@
-/* Design System is when you want to reuse your code!👇 */
-:root {
-  --color-name: green;  
+/**
+*! styles for section one
+**/
+.sectionOne__left--text {
+  font-family: var(--font-1);
+  font-size: var(--body);
+  color: var(--color-white-75);
 }
 
-.item-1 {
-  color: var(--color-name);
-}
-.item-2 {
-  color: var(--color-name);;
-}
-.item-3 {
-  color: var(--color-name);;
-}
-.item-4 {
-  color: var(--color-name);;
+.sectionOne__left--btn{
+    align-self: center;
+    margin-top: 20px;
 }
