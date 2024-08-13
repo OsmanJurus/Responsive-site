@@ -35,6 +35,8 @@
   --color-green-75: rgba(116, 198, 157, 0.75);
   --color-green-50: rgba(116, 198, 157, 0.5);
   --color-green-25: rgba(116, 198, 157, 0.25);
+
+  --shadow-1: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
 }
 
 /**
@@ -52,8 +54,8 @@
 **/
 .dark-btn,
 .white-btn {
-  color: var(--color-dark-100);
-  background-color: var(--color-white-100);
+  color: var(--color-white-100);
+  background-color: var(--color-dark-100);
   cursor: pointer;
   font-size: var(--h6);
   font-family: var(--font-2);
@@ -100,7 +102,7 @@
 /**
 *! style rules for navigation bar!
 **/
-.navbar {
+.navbar{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -145,25 +147,50 @@
 }
 
 /**
-*! styles for Home Page by using Grid and flexBox!
+*! styles for Section One Page by using Grid and flexBox!
 **/
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   padding: 40px 0;
   gap: 25px;
 }
 
-.flex{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.common-title{
-    font-family: var(--font-1);
-    font-size: var(--h1);
-    text-transform: capitalize;
-    font-weight: bold;
+.common-title {
+  font-family: var(--font-1);
+  font-size: var(--h1);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+/**
+*! styles for Section five teams!
+**/
+
+.card {
+  width: 200px;
+  height: auto;
+  border: 1px solid;
+  border-radius: 5%;
+  box-shadow: 0 0 3px 2px var(--color-dark-25);
+  padding: 10px;
+}
+
+.sectionFive__down--cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  padding: 0 0 20px;
+}
+
+.sectionFive {
+  padding-bottom: 20px;
 }
 /* By using flexBox
 .sectionOne {
@@ -195,18 +222,39 @@
     color: var(--color-white-75);
 }
 */
+.footerLinks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+} 
+
+.footerLinks__socials{
+    display: flex;
+    gap: 10px;
+}
+
+.footerLinks__copyright{
+    font-size: var(--sub);
+    font-family: var(--font-2);
+    color: var(--color-white-100);
+}
 /**
 *! styles for common classes!
 **/
 .container {
   max-width: 1140px; /**/
   margin: auto;
-  align-items: center;
 }
 
 .responsive-image {
   max-width: 100%;
   height: auto;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -220,9 +268,16 @@
   .container {
     width: 740px;
   }
+  .common-title {
+    font-size: var(--h4);
+  }
+
 }
 @media (max-width: 768px) {
   /* for tablet */
+  .grid{
+    grid-template-columns: repeat(1,1fr);
+  }
   .container {
     width: 500px;
   }
@@ -239,6 +294,11 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+  .footerLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .navbar__menu--1 {
     margin-top: -200px;
@@ -260,5 +320,11 @@
   /* for mobile */
   .container {
     width: 250px;
+  }
+  .footerLinks__socials{
+ flex-direction: column;
+  }
+  .footerLinks__copyright{
+    text-align: center;
   }
 }
