@@ -1,0 +1,56 @@
+body {
+  display: grid;
+  min-height: 100vh;
+}
+
+.hero {
+  align-self: start;
+}
+
+.footerWrapper {
+  align-self: end;
+}
+
+.text {
+  font-family: var(--font-2);
+  font-size: var(--body);
+}
+
+.sectionOne {
+  margin-top: 20px;
+  /* display: grid; */
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+
+label {
+  font-family: var(--font-2);
+  font-size: var(--sub);
+  color: var(--color-dark-75);
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 1px solid #1213;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.dark-btn {
+  align-self: center;
+}
+
+/** 
+*! media qureis! 
+**/
+
+@media (max-width: 768px) {
+  .sectionTwo__right {
+    order: -1;
+  }
+}
