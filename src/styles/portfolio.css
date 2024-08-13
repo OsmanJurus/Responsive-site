@@ -1,0 +1,35 @@
+/**
+*! style rules for section One
+**/
+.sectionOne {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.sectionOne__content--text {
+  font-family: var(--font-2);
+  font-size: var(--body);
+  color: var(--color-dark-75);
+}
+
+.sectionOne__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  place-items: center;
+}
+
+.sectionOne__btn {
+  justify-self: center;
+}
+
+/**
+*! style rules for responsive!
+**/
+
+@media (max-width: 768px) {
+  .sectionOne__images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
